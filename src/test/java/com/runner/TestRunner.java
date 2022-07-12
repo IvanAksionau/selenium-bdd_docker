@@ -1,5 +1,6 @@
 package com.runner;
 
+
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
@@ -13,6 +14,6 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
                 "json:target/cucumber-reports/json-reports/CucumberTestReport.json",
                 "rerun:target/cucumber-reports/rerun-reports/rerun.txt"
         })
-public class TestRunner extends AbstractTestNGCucumberTests{
+public class TestRunner extends AbstractTestNGCucumberTests {
 
 }

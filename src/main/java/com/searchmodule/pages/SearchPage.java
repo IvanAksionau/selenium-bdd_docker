@@ -54,5 +54,4 @@ public class SearchPage {
         System.out.println("Search Result : " + this.allVideos.size());
         return this.allVideos.size();
     }
-
 }

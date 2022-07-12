@@ -6,6 +6,7 @@ import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -14,7 +15,7 @@ import org.testng.Assert;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class SearchSteps{
+public class SearchSteps {
 
     private SearchPage searchPage;
     private WebDriver driver;
@@ -31,7 +32,7 @@ public class SearchSteps{
     }
 
     @And("^I navigate to videos search$")
-    public void navigateTovideos()  {
+    public void navigateTovideos() {
         searchPage.goToVideos();
     }
 
@@ -48,14 +49,14 @@ public class SearchSteps{
         String host = "localhost";
         DesiredCapabilities dc;
 
-        if(System.getProperty("BROWSER") != null &&
-                System.getProperty("BROWSER").equalsIgnoreCase("firefox")){
+        if (System.getProperty("BROWSER") != null &&
+                System.getProperty("BROWSER").equalsIgnoreCase("firefox")) {
             dc = DesiredCapabilities.firefox();
-        }else{
+        } else {
             dc = DesiredCapabilities.chrome();
         }
 
-        if(System.getProperty("HUB_HOST") != null){
+        if (System.getProperty("HUB_HOST") != null) {
             host = System.getProperty("HUB_HOST");
         }
 
@@ -64,8 +65,7 @@ public class SearchSteps{
     }
 
     @After
-    public void quitDriver(){
+    public void quitDriver() {
         this.driver.quit();
     }
-
 }
